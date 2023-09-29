@@ -1,32 +1,4 @@
-local a = Instance.new("MeshPart")
-a.MeshId = "rbxassetid://11827579973"
 
-
--- Set the initial position of 'a' to your character's head position plus an offset
-local character = game.Players.LocalPlayer.Character
-local head = character:WaitForChild("Head")
-local offset = Vector3.new(0, 5, 0) -- You can adjust the offset as needed
-a.Position = head.Position + offset
-
-a.Parent = workspace
-a.Material = Enum.Material.Neon
-a.Name = "Dawnwalker"
-a.Size = Vector3.new(0.5, 0.5, 0.5)
-
--- Create a WeldConstraint to attach 'a' to your character's head
-local weld = Instance.new("WeldConstraint")
-weld.Parent = a
-weld.Part0 = a
-weld.Part1 = head
-
-
-
-local light = Instance.new("PointLight")
-light.Range = 8
-light.Brightness = 1.5
-light.Parent = a
-
-light.Parent = a 
 
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
